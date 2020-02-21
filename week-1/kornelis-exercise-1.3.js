@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title: Exercise 1.1
+; Title: Exercise 1.3
 ; Author: Izabella Kornelis
 ; Date: 19 February 2020
 ; Modified By: Izabella Kornelis
