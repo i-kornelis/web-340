@@ -12,7 +12,7 @@
 const header = require('../kornelis-header.js');
 
 // Call the console.log() function and output a well-formatted header
-console.log(header.display("Izabella", "Kornelis", "Assignment 1.3"));
+console.log(header.display("Izabella", "Kornelis", "Assignment 1.5"));
 // new line
 console.log('\n');
 
