@@ -9,7 +9,7 @@
 */
 
 // Require statement that imports the header.js file from my root directory.
-const header = require('../kornelis-header.js');
+const header = require('../../kornelis-header.js');
 
 // Call the console.log() function and output a well-formatted header
 console.log(header.display("Izabella", "Kornelis", "Assignment 2.2"));
@@ -18,6 +18,9 @@ console.log('\n');
 
 // program start
 
+// load Express
+var express = require('express');
+
 var http = require("http");
 
 var app = express();
@@ -25,7 +28,9 @@ var app = express();
 app.use(function(request,response){
     console.log("in comes a request to:" + request.url);
 
-     response.end("Hello World");
+     response.end("Hello World\n");
 });
 
-http.createServer(app).listen(8080);
+http.createServer(app).listen(8080, function() {
+  console.log("Application started on port " + 8080);
+});

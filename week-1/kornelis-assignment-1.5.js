@@ -39,3 +39,18 @@ s.listen(8080);
 
 
 //end program
+
+var name = 'John';
+
+function printName(){
+
+  console.log(name);
+ };
+
+ console.log( 'My name is ' + name + '.')
+
+ printName()
+
+
+
+
