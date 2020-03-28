@@ -1,0 +1,15 @@
+html {
+  overflow: auto;
+  font-family: 'Roboto', "sans-serif" !important;
+}
+
+nav {
+  font-family: 'Montserrat', "sans-serif";
+  font-weight: 600;
+  text-transform: uppercase;
+
+}
+
+h1 {
+  color: blue !important;
+}

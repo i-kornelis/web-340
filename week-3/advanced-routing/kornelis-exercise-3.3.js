@@ -44,3 +44,13 @@ http.createServer(app).listen(8080, function(){
 });
 
 // end program
+
+;myFunction_propertyA = {
+
+	myFunction: function()
+	{
+		console.log('myFunction...');
+	}
+
+}
+myFunction_propertyA.myFunction();
