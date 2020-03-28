@@ -5,10 +5,10 @@
 <body>
   <%- include('navbar'); -%>
 
-<div role="main" class="container" style="width: 30%;">
+<div role="main" class="container bg" style="width: 30%;">
   <br /><br />
 
-  <% if (employee.length) { %>
+  <%- if (employee.length) { -%>
     <h2>Employees</h2>
     <br />
     <a class="" href="/new">New Employee</a>
@@ -22,7 +22,7 @@
       </tr>
       </thead>
       <tbody>
-      <% employee.forEach(function (entry) { %>
+      <%- employee.forEach(function (entry) { -%>
         <tr>
           <td><%= entry.name %></td>
           <td style="width: 10%; text-align: center;">
@@ -38,8 +38,8 @@
   <% } %>
 
   <br />
+  <%- include('footer'); -%>
 </div>
-<%- include('footer'); -%>
 <%- include('scripts'); -%>
 </body>
 </html>

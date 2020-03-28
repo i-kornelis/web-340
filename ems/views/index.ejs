@@ -1,14 +1,21 @@
 <%- include('header'); -%>
 <body>
-  <div role="main" class="container">
+  <div role="main" class="container bg">
     <%- include('navbar'); -%>
     <div id="hero"></div>
     <div class="container">
+      <h1> Welcome to our EMS</h1>
       <h2>Here you can find a list of employee records...</h2>
-    </div>
 
+      <p><strong>What do you want to do?</strong> Click one of the links below.</p>
+    </div>
+    <div class="cta">
+      <button class="btn"><a href="new">Create New Employee</a></button>
+      <button class="btn"><a href="list">List View</a></button>
+      <Button class="btn"><a href="view">View Details</a></Button>
+    </div>
+    <%- include('footer'); -%>
   </div>
-  <%- include('footer'); -%>
   <%- include('scripts'); -%>
 </body>
 </html>
