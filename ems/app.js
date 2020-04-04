@@ -13,6 +13,21 @@ var express = require("express");
 var http = require("http");
 var path = require("path");
 var logger = require("morgan");
+var mongoose = require('mongoose');
+var Employee = require('./models/employee');
+
+
+// Establishes a database connection to MongoDB).
+const mongoDB = 'mongodb+srv://new-user_1:o8n81IUQvMXblbik@buwebdev-cluster-1-9gdfg.mongodb.net/test?retryWrites=true&w=majority';
+mongoose.connect(mongoDB, {
+  useMongoClient: true
+});
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', function() {
+  console.log('Application connected to MongoDB instance');
+});
 
 // start new app
 var app = express();
@@ -22,6 +37,12 @@ app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(logger("short"));
 
+//model
+var employee = new Employee({
+  firstName: employeeFirstName,
+  lastName: employeeLastName
+});
+
 app.get("/", function (request, response) {
 
     response.render("index", {
@@ -30,7 +51,7 @@ app.get("/", function (request, response) {
 
 });
 
-app.get("/list", function (request, response) {
+app.get("/views/list", function (request, response) {
 
   response.render("list", {
       title: "List View"
@@ -38,7 +59,7 @@ app.get("/list", function (request, response) {
 
 });
 
-app.get("/new", function (request, response) {
+app.get("/views/new", function (request, response) {
 
   response.render("new", {
       title: "Create New Employee"
@@ -46,7 +67,7 @@ app.get("/new", function (request, response) {
 
 });
 
-app.get("/view", function (request, response) {
+app.get("/views/view", function (request, response) {
 
   response.render("view", {
       title: "View Employee Details"
