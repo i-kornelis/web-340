@@ -39,8 +39,8 @@ app.use(logger("short"));
 
 //model
 var employee = new Employee({
-  firstName: employeeFirstName,
-  lastName: employeeLastName
+  firstName: "employeeFirstName",
+  lastName: "employeeLastName"
 });
 
 app.get("/", function (request, response) {
